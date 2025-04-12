@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor-Patient Communication</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Basic Styles for Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .appointment-form input, .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .appointment-form button, .message-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .appointment-form button:hover, .message-form button:hover {
+            background-color: #45a049;
+        }
+
+        .messages {
+            margin-top: 20px;
+        }
+
+        .message-card {
+            background-color: #e9f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .message-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Doctor-Patient Communication Platform</h1>
+    <p>Connecting doctors and patients efficiently for better healthcare</p>
+</header>
+
+<div class="container">
+    <!-- Login Section -->
+    <div class="card" id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="button">Login</button>
+        </form>
+    </div>
+
+    <!-- Appointment Scheduling Section -->
+    <div class="card" id="appointment-section">
+        <h2>Schedule an Appointment</h2>
+        <form class="appointment-form">
+            <label for="doctor-name">Doctor's Name:</label>
+            <input type="text" id="doctor-name" name="doctor-name" placeholder="Doctor's name" required>
+
+            <label for="appointment-date">Preferred Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+
+            <label for="appointment-time">Preferred Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+
+            <button type="submit" class="button">Book Appointment</button>
+        </form>
+    </div>
+
+    <!-- Message Section -->
+    <div class="card" id="message-section">
+        <h2>Send Message to Doctor</h2>
+        <form class="message-form">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
+
+            <button type="submit" class="button">Send Message</button>
+        </form>
+
+        <div class="messages">
+            <div class="message-card">
+                <p><strong>Doctor:</strong> Hello, how are you feeling today?</p>
+            </div>
+            <div class="message-card">
+                <p><strong>You:</strong> I'm feeling better, thank you!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
